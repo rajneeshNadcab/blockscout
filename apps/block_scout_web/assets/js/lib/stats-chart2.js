@@ -28,11 +28,7 @@ const chartOptions = {
 
   export const fetchApi = async () => {
     try {
-<<<<<<< HEAD
-      const response = await axios.get('https://testnet.wyzthscan.org/node-api/average-block-size');
-=======
       const response = await axios.get('https://testnet.xuvscan.com/node-api/average-block-size');
->>>>>>> upstream/xuv_explorer
       const data = response.data.data; // Assuming the response contains the desired data
       const categories = [];
       const values = [];
