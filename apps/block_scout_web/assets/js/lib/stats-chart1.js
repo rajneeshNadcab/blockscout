@@ -28,7 +28,11 @@ const chartOptions = {
 
   export const fetchApi = async () => {
     try {
+<<<<<<< HEAD
       const response = await axios.get('https://testnet.wyzthscan.org/node-api/erc-20');
+=======
+      const response = await axios.get('https://testnet.xuvscan.com/node-api/erc-20');
+>>>>>>> upstream/xuv_explorer
       const data = response.data.data; // Assuming the response contains the desired data
       const categories = [];
       const values = [];

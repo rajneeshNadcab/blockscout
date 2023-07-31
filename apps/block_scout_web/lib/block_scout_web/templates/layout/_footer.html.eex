@@ -29,7 +29,11 @@
 }
 
 .search_backdrop {
+<<<<<<< HEAD
   background-image: linear-gradient(to right, #746305, #756e15, #767a24, #778532, #779041);
+=======
+  background: #121e1d;
+>>>>>>> upstream/xuv_explorer
   width: 100%;
   color: #fff;
 }
@@ -40,19 +44,40 @@
   background-position: left center;
 }
 
+<<<<<<< HEAD
 .footer_backdrop {
   background-image: linear-gradient(to right, #746305, #756e15, #767a24, #778532, #779041);
+=======
+.footer_backdrop {  
+  background-image: linear-gradient(to right top, #38b292, #32b796, #2bbc99, #22c29d, #14c7a1);
+>>>>>>> upstream/xuv_explorer
   width: 100%;
   color: #fff;
 }
 
 .footer_overlay {
-  background-image: url(/images/backdrop-bg.svg);
+  background: #121e1d;
   background-repeat: repeat;
   background-position: left center;
 }
 
 
+<<<<<<< HEAD
+=======
+.theme-button {
+  background: url(/images/sun.jpg);
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.dark-theme-applied .theme-button {
+  background: url(/images/moon.png)!important;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+>>>>>>> upstream/xuv_explorer
 
 .dark-theme-applied .border {
   border: 1px solid #46484a !important;
@@ -64,7 +89,7 @@
 }
 
 .logo_custom_img .logo_img {
-  background: url(/images/wyz-logo.svg);
+  background: url(/images/xuv-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 175px;
@@ -73,7 +98,7 @@
 
 
 .dark-theme-applied .logo_custom_img .logo_img {
-  background: url(/images/wyz-logo_darktheme.png);
+  background: url(/images/xuv-logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 175px;
@@ -88,26 +113,30 @@
 }
 
 .navbar-image .media_bg_icon {
-  background: url(/images/small-logo-icon.png);
+  background: url(/images/xuv-icon.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .dark-theme-applied .navbar-image .media_bg_icon {
-  background: url(/images/small-logo-icon-dark.png);
+  background: url(/images/xuv-icon.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .dashboard_home .media_bg_icon {
+<<<<<<< HEAD
     background: url(/images/small-logo-icon.png);
+=======
+    background: url(/images/xuv-icon.png);  
+>>>>>>> upstream/xuv_explorer
     background-size: contain;
     background-position: 27% 4%;
     background-repeat: no-repeat;
 }
 
 .dark-theme-applied .dashboard_home .media_bg_icon{
-  background: url(/images/small-logo-icon-dark.png);
+  background: url(/images/xuv-icon.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -202,6 +231,18 @@ a.metamask_btn {
   max-width: 100px !important;
 }
 
+
+
+.btn-success {
+  background-color: #22AA86!important;
+  color: #fff!important;
+  border-color: #22AA86!important;
+}
+
+.media_icon {
+  filter:grayscale(1)
+}
+
 </style>
 
 <footer class="footer pb-0 pt-0 footer_backdrop">
@@ -228,6 +269,7 @@ a.metamask_btn {
 
       <div class="footer-about-bg"></div>
       <p class="text-white">
+<<<<<<< HEAD
      <!-- <%= gettext("WYZthScan is a Block Explorer and Analytics Platform for WYZth ") %>  <%= gettext(" chain, a decentralized smart contains platform.") %></p> -->
 
 
@@ -237,15 +279,41 @@ a.metamask_btn {
     <i class="fas fa-cogs mr-1"></i> Preferences
   </a>
   <%= render BlockScoutWeb.LayoutView, "_add_chain_to_mm.html" %>
+=======
+     
+      <%= gettext(
+        " %{subnetwork} Explorer",          
+        subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()
+      ) %>
+
+     
+      <%= gettext(" Scan is a Block Explorer and Analytics Platform for smart contracts that also includes an analytics platform and a block explorer ") %>  
+    </p>
+
+      <a type="button" class="btn btn-xs btn-lighter text-nowrap mr-2" href="/preferences">
+        <i class="fas fa-cogs mr-1"></i> Preferences
+      </a>
+
+      
+
+      <%= render BlockScoutWeb.LayoutView, "_add_chain_to_mm.html" %>
+>>>>>>> upstream/xuv_explorer
     </div>
 
   <!--  <div class="col-6 col-md-4 col-lg-<%= col_size %>">
       <h3 class="text-white heading_border">Company</h3>
       <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
+<<<<<<< HEAD
         <li><a href="https://wyzth.org/" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("About Us") %></a></li>
         <li><a href="https://t.me/officialwyzth" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
 
         <li><a href="https://wyzth.org/careers" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Careers") %>
+=======
+        <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("About Us") %></a></li>
+        <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
+        
+        <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Careers") %>
+>>>>>>> upstream/xuv_explorer
         <sup class="join">Join Us</sup></a></li>
         <li><a href="terms-of-service" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Terms of Service") %></a></li>
 
@@ -257,10 +325,17 @@ a.metamask_btn {
       <!--<div class="col-6 col-md-4 col-lg-<%= col_size %>">
         <h3 class="text-white heading_border"><%= gettext("Resources") %></h3>
         <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
+<<<<<<< HEAD
           <li><a href="https://docs.wyzth.org/docs/Overview" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("API Documentation") %></a></li>
           <li><a href="https://newsletter.thecoinweekly.com/" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Newsletter") %></a></li>
 
 
+=======
+          <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("API Documentation") %></a></li>         
+          <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Newsletter") %></a></li>
+       
+          <!--
+>>>>>>> upstream/xuv_explorer
           <%= for %{title: title, url: url} <- test_nets do %>
             <li><a href="<%= url %>" rel="noreferrer" class="footer-link"> <%= title %> </a></li>
           <% end %>
@@ -275,9 +350,17 @@ a.metamask_btn {
      <!-- <div class="col-6 col-md-4 col-lg-<%= col_size %>">
         <h3 class="text-white heading_border"><%= gettext("Products & Services") %></h3>
         <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
+<<<<<<< HEAD
 
         <li><a href="https://wyscale.com/" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("WYscale") %></a></li>
        <li><a href="/chat" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Chat") %></a></li>
+=======
+        
+        <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Product & services 1") %></a></li>
+        <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Product 2") %></a></li>
+        <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Product 3") %></a></li>
+    
+>>>>>>> upstream/xuv_explorer
 
         Absinthe<%= for %{title: title, url: url} <- main_nets do %>
           <li><a href="<%= url %>" rel="norefferer" class="footer-link"> <%= title %> </a></li>
@@ -312,11 +395,15 @@ a.metamask_btn {
   <div class="row text-white py-2">
     <div class="col-md-6 col-6 mb-sm">
       <div class="d-flex pt-1">
-        <div>WYZthScan &copy; 2023 </div>
+        <div>
+          <%= gettext( " %{subnetwork}", subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()) %> 
+          <%= gettext(" &copy; 2023") %> 
+        </div>
         <div class="ml-2"><span class="text-danger ms-2"> <i class="fa fa-heart"></i> </span></div>
       </div>
     </div>
     <div class="col-md-6 col-6">
+<<<<<<< HEAD
       <div class="footer-social float-right">
 
         <a href="https://t.me/officialwyzth" rel="noreferrer" target="_blank" title="medium">
@@ -330,6 +417,21 @@ a.metamask_btn {
           <i class="fab fa-linkedin"></i>
         </a>
         <a href="https://twitter.com/wyzthofficial" rel="noreferrer" target="_blank" title="twitter">
+=======
+      <div class="footer-social float-right"> 
+      
+        <a href="#" rel="noreferrer" target="_blank" title="medium">
+          <i class="fab fa-telegram"></i>
+        </a>    
+        <a href="#" rel="noreferrer" target="_blank" title="reddit">
+          <i class="fab fa-instagram"></i>
+        </a>     
+    
+        <a href="#" rel="noreferrer" target="_blank" title="facebook">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" rel="noreferrer" target="_blank" title="twitter"> 
+>>>>>>> upstream/xuv_explorer
           <i class="fab fa-twitter"></i>
         </a>
 

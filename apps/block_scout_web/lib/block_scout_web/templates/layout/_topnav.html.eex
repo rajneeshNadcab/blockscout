@@ -7,7 +7,9 @@
     <div class="row topbar_search align-items-center py-2">
       <div class="col-lg-6 pl-4">
           <div class="d-none d-lg-inline-block m text-nowrap fs-12">
-            <span class="text-secondary"> WYZth Price :</span> <span class="text-info"> $20</span>
+            <span class="text-secondary">
+             <%= gettext( " %{subnetwork}", subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()) %>   Price :</span>
+             <span class="text-info"> $20</span>
             <span data-toggle="tooltip" data-placement="top" data-title="Changes in the last 24 hours" data-original-title="" title="">
               <span class="text-success d-none"> (+1.27%)</span>
             </span>
@@ -182,9 +184,15 @@
                         to: "/directories"
                       ) %>
 
+<<<<<<< HEAD
 
                       <a class="dropdown-item" target="_blank" href="https://docs.wyzth.org/docs/Overview"> API Documentation</a>
 
+=======
+                   
+                      <a class="dropdown-item" target="_blank" href="#"> API Documentation</a>
+                  
+>>>>>>> upstream/xuv_explorer
                 </div>
               </li> -->
 
@@ -242,13 +250,13 @@
                       <%= link(
                         gettext("Mainnet"),
                         class: "dropdown-item #{tab_status("mainnet", @conn.request_path)}",
-                        to: "https://wyzthscan.org/"
+                        to: "#"
                       ) %>
 
                       <%= link(
                         gettext("Testnet"),
                         class: "dropdown-item #{tab_status("testnet", @conn.request_path)}",
-                        to: "https://testnet.wyzthscan.org/"
+                        to: "#"
                       ) %>
 
                 </div>
@@ -271,6 +279,7 @@
           </li>
 
 
+<<<<<<< HEAD
           <li class="nav-item d-none d-lg-inline-block">
           <!--<a href="#" class="nav-link topnav-nav-link  border rounded ml-2 navbar-image">
 
@@ -300,6 +309,11 @@
         </li>
 
 
+=======
+          
+      
+         
+>>>>>>> upstream/xuv_explorer
 
 
           <!-- <%= if Application.get_env(:block_scout_web, BlockScoutWeb.ApiRouter)[:reading_enabled] || Application.get_env(:block_scout_web, :api_url) do %>
