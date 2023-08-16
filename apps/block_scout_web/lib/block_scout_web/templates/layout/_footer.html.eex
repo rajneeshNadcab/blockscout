@@ -5,6 +5,10 @@
   z-index:5;
   padding-bottom:25px
 }
+
+.btn:focus, .btn.focus {
+  box-shadow:none!important
+}
 .footer-about-bg {
     background-image: url(/images/map.png);
     background-repeat: no-repeat;
@@ -100,6 +104,10 @@
   width: 176px;
   height: 32px;
 }
+.navbar-image .btn {
+  padding: 6px 8px!important;
+}
+.navbar-image {margin:0 10px;}
 
 .navbar-image .media_bg_icon {
   background: url(/images/xuv-icon.png);
@@ -188,17 +196,26 @@ a.metamask_btn {
   border-radius: 5px
 }
 .dark-mode-changer-btn::before {
-  content: " \002600";
-  font-family:  unset;!important
+  content: "";
+  background: url(/images/sun.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    margin: 3px -6px;
+    width: 28px;
+    height: 28px;
+  font-family:  unset!important
     font-weight: 400;
   font-size: 22px;
-  color:#db9a23
+  color:#778B3A;
 }
 
 .dark-theme-applied .dark-mode-changer-btn::before {
   content: "\f186";
   font-family: "Font Awesome 6 Free";
+  background:none;
     font-weight: 400;
+    margin: 1px -6px 4px -6px;
   font-size: 18px;
   padding: 3px 0;
   color: #fff;
@@ -373,7 +390,7 @@ a.metamask_btn {
 <!-- Scroll top-->
 <a id="scrollupbtn" class="">
   <i class="fas fa-arrow-up"></i>
-</a>
+
 
 <script>
 
@@ -395,3 +412,4 @@ document.getElementById("navbar_search").style.display ="block";
 
 
 </script>
+<script type= "script" id="dsq-count-scr" src="//https-wyzthscan-org.disqus.com/count.js" async></script>

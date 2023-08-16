@@ -95,7 +95,7 @@ end
    get("/charts/tx", ChartController, :tx)
    get("/charts/blocksize", ChartController, :blocksize)
    get("/charts/bep2etxns", ChartController, :bep2etxns)
- get("/charts/gasused", ChartController, :blocktime)  
+ get("/charts/gasused", ChartController, :blocktime)
   get("/charts/gasprice", ChartController, :gasprice)
    get("/charts/gaslimit", ChartController, :gaslimit)
    get("/charts/uniqueaddress", ChartController, :uniqueaddress)
@@ -105,40 +105,43 @@ end
   scope "/", BlockScoutWeb do
   pipe_through :browser
   get "/statistics", StatisticsController, :index
-  
+
 end
 
   scope "/", BlockScoutWeb do
   pipe_through :browser
   get "/vyper-verification", VyperContractVerificationController, :index
-  
+
 end
   scope "/", BlockScoutWeb do
   pipe_through :browser
   get "/diff-checker", DiffCheckerController, :index
-  
+
 end
   scope "/", BlockScoutWeb do
   pipe_through :browser
   get "/preferences", PreferencesController, :index
-  
+
+end
+scope "/tx", BlockScoutWeb do
+  get "/:id/disqus", DisqusController, :index
 end
   scope "/", BlockScoutWeb do
   pipe_through :browser
-  get "/top-nft", NftDataController, :index 
-   get "/latest-nft-transactions", NftDataController, :nft_token_transfer 
-   get "/latest-mint", NftDataController, :nft_mint 
+  get "/top-nft", NftDataController, :index
+   get "/latest-nft-transactions", NftDataController, :nft_token_transfer
+   get "/latest-mint", NftDataController, :nft_mint
 end
 
   scope "/", BlockScoutWeb do
   pipe_through :browser
   get "/pushTx", BroadcastTransactionController, :index
-  
+
 end
 
   scope "/", BlockScoutWeb do
   pipe_through :browser
-  get "/contract-search", SearchContractController, :index 
+  get "/contract-search", SearchContractController, :index
 end
 
 
@@ -158,19 +161,21 @@ end
      get "/directories/smart-contract-audit", DirectoriesController, :smart_contract_audit
       get "/directories/smart-contracts-factory", DirectoriesController, :smart_contracts_factory
        get "/directories/mining-pool", DirectoriesController, :miningpools
+       get "/directories/mining-talk", DirectoriesController, :mining
      get "/directories/grants", DirectoriesController, :directories_grants
      get "/directories/tools", DirectoriesController, :tools
 end
 
   scope "/", BlockScoutWeb do
   pipe_through :browser
-  get "/terms-of-service", TermsOfServiceController, :index 
+  get "/terms-of-service", TermsOfServiceController, :index
+  get "/privacy-policy", TermsOfServiceController, :privacy
 end
 
   scope "/", BlockScoutWeb do
   pipe_through :browser
-  get "/chat", BlocksChatController, :index 
-   post "/node-api/send-message", BlocksChatController, :send_message 
+  get "/chat", BlocksChatController, :index
+   post "/node-api/send-message", BlocksChatController, :send_message
 end
 
 
@@ -183,10 +188,7 @@ end
       pipe_through(:browser)
 
       forward("/", APIDocsController, :index)
-      
+
     end
   end
 end
-
-
-

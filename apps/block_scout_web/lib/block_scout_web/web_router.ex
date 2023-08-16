@@ -124,6 +124,7 @@ defmodule BlockScoutWeb.WebRouter do
     resources("/verified-contracts", VerifiedContractsController, only: [:index])
 
     get("/txs", TransactionController, :index)
+    get("/internal-transactions", TransactionController, :internal)
 
     resources "/tx", TransactionController, only: [:show] do
       resources(
@@ -148,6 +149,10 @@ defmodule BlockScoutWeb.WebRouter do
       )
 
       resources("/state", TransactionStateController,
+        only: [:index],
+        as: :state
+      )
+       resources("/disqus", DisqusController,
         only: [:index],
         as: :state
       )
@@ -495,7 +500,7 @@ defmodule BlockScoutWeb.WebRouter do
     get("/token-counters", Tokens.TokenController, :token_counters)
 
     get("/visualize/sol2uml", VisualizeSol2umlController, :index)
- 
+
 
     get("/*path", PageNotFoundController, :index)
   end

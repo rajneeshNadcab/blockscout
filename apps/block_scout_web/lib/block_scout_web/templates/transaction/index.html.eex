@@ -4,6 +4,7 @@
   }
   window.onload = ShowLayoutContainer()
 </script>
+<script defer src="<%= static_path(@conn, "/js/internal_transaction.js") %>"></script>
 <section class="container" data-page="transaction-list">
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
   <div class="page-title display_flex border-bottom">
@@ -107,10 +108,10 @@
 
   <div class="card">
     <div class="card-body px-3 validated_txns" data-async-listing="<%= @current_path %>">
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between mobile-view-col">
         <!--<h1 class="card-title list-title-description"><%= gettext "Validated Transactions" %></h1>-->
         <div>
-          <p>More than > 0000.0000 transactions found <br/> (Showing the last 500k records)</p>
+          <p>More than > <span class="update-1000">1000</span> transactions found <br/> (Showing the last 500k records)</p>
         </div>
 
         <div class="list-top-pagination-container-wrapper">
@@ -161,7 +162,8 @@
         </div>
       </div>
 
-      <%= render BlockScoutWeb.CommonComponentsView, "_rap_pagination_container.html", position: "bottom" %>
+      <%= render BlockScoutWeb.CommonComponentsView, "_rap_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+
 
   </div>
   <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/validated-transactions.js") %>"></script>

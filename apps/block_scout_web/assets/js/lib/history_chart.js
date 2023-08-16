@@ -21,9 +21,9 @@ const grid = {
 
 function getTxChartColor () {
   if (Cookies.get('chakra-ui-color-mode') === 'dark') {
-    return sassVariables.dashboardLineColorTransactionsDarkTheme
+    return "white"
   } else {
-    return sassVariables.dashboardLineColorTransactions
+    return "#000"
   }
 }
 
@@ -43,26 +43,30 @@ function getMarketCapChartColor () {
   }
 }
 
+
 function xAxe (fontColor) {
   return {
     grid,
     type: 'time',    
     time: {
-      unit: 'week',
+      unit: 'day',
       tooltipFormat: 'DD',
-      // stepSize: 15
+       stepSize: 15
     },
     ticks: {
       color: fontColor,
       display: true,
-      maxTicksLimit: 4
+      maxTicksLimit: 3
     },     
   }
 }
 
+
+
+
 const padding = {
-  left: 20,
-  right: 20
+  left: 0,
+  right: 0
 }
 
 const legend = {
@@ -72,6 +76,27 @@ const legend = {
 function formatValue (val) {
   return `${numeral(val).format('0,0')}`
 }
+
+const isDarkMode = Cookies.get('chakra-ui-color-mode') ;
+
+const tooltipOptionsDark = {
+  backgroundColor: '#212529',
+  borderColor: 'rgba(255, 255, 255, 0.8)',
+  titleColor: 'rgba(255, 255, 255, 0.8)',
+  bodyColor: 'rgba(255, 255, 255, 0.8)',
+  
+};
+
+const tooltipOptionsLight = {
+  backgroundColor: '#f3f3f3',
+  borderColor: 'rgba(0, 0, 0, 0)',
+  titleColor: 'rgba(0, 0, 0, 0.8)',
+  bodyColor: 'rgb(0, 0, 0)'
+};
+
+const selectedTooltipOptions = isDarkMode === 'dark' ? tooltipOptionsDark : tooltipOptionsLight;
+
+
 
 const config = {
   type: 'line',
@@ -88,14 +113,16 @@ const config = {
       mode: 'index'
     },
     scales: {    
-      x: xAxe(sassVariables.dashboardBannerChartAxisFontColor),
+      x: xAxe(isDarkMode === 'dark'?"#fff":"#000"),
+   
       price: {
+        display: false, 
         position: 'left',
         grid,
         ticks: {
           beginAtZero: false,
           callback: (value, _index, _values) => `$${numeral(value).format('0,0.00')}`,
-          maxTicksLimit: 4,
+          maxTicksLimit: 2,
           color: sassVariables.dashboardBannerChartAxisFontColor
         },
         // borderColor: 'transparent',
@@ -111,14 +138,14 @@ const config = {
         }
       },
       numTransactions: {
-        display: false,  
-        position: 'right',
+        display: true,  
+        position: 'left',
         grid,
         ticks: {
-          beginAtZero: true,
+          // beginAtZero: false,
           callback: (value, _index, _values) => formatValue(value),
-          maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          maxTicksLimit: 2,
+          color: isDarkMode === 'dark'?"#fff":"#000"
         }
       }
     },
@@ -133,7 +160,10 @@ const config = {
       },
       tooltip: {
         mode: 'index',
+     
         intersect: false,
+      
+        ...selectedTooltipOptions,
         callbacks: {
           label: (context) => {
             const { label } = context.dataset
@@ -148,7 +178,8 @@ const config = {
               return formattedValue
             }
           }
-        }
+        },
+       
       }
     }
   }
@@ -182,7 +213,7 @@ function getTxHistoryData (transactionHistory) {
   const prevDayStr = data[0].x
   const prevDay = DateTime.fromISO(prevDayStr)
   let curDay = prevDay.plus({ days: 1 })
-  curDay = curDay.toISODate()
+  curDay = curDay.toISODate() 
   data.unshift({ x: curDay, y: null })
 
   setDataToLocalStorage('txHistoryData', data)
@@ -257,8 +288,8 @@ class MarketHistoryChart {
       fill: false,
       pointRadius: 0,
       backgroundColor: getTxChartColor(),
-      // borderColor: getTxChartColor(),
-      borderColor: 'rgba(0, 0, 0, 1)',
+       borderColor: getTxChartColor(),
+      // borderColor: 'rgba(0, 0, 0, 1)',
       borderWidth:1,
       //  lineTension: 0     
       

@@ -27,11 +27,16 @@
 <% {:ok, created_from_address} = if to_address_hash, do: Chain.hash_to_address(to_address_hash), else: {:ok, nil} %>
 <% created_from_address_hash_str = if from_address_hash(created_from_address), do: "0x" <> Base.encode16(from_address_hash(created_from_address).bytes, case: :lower), else: nil %>
 <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
-<section class="fs-14" data-page="transaction-details" data-page-transaction-hash="<%= @transaction %>">
+<section class="fs-14" data-page="transaction-details" id="transaction_detail_id" data-page-transaction-hash="<%= @transaction %>">
+
+
+
   <div class="row">
-    <div class="col-md-12">
+
+
+    <div class="col-md-12 transaction_display_id">
       <!-- Transaction Details -->
-          <div class="page-title display_flex">
+          <div class="page-title display_flex" >
             <%= cond do %>
               <% Enum.member?(circles_addresses_list, address_hash_str) -> %>
                 <div class="custom-dapp-header-container">
@@ -63,7 +68,9 @@
               <% end %>
             </div>
 
-            <div class="d-flex">
+          <!--  <div class="d-flex">
+
+
               <div class="dropdown">
                 <button class="btn btn-primary btn-xs dropdown-toggle fs-12" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Exchange
@@ -86,7 +93,7 @@
                 </div>
               </div>
 
-            </div>
+            </div> -->
           </div>
           <div>
                <%= if status == :pending do %>
@@ -101,7 +108,21 @@
           </div>
           <p class=""> A Web3 Crypto Mutual Fund, start with as low as $50 on <a href="/" target="_blank" class="text-blue font-weight-bold">  <%= gettext( " %{subnetwork}", subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()) %> </a>
           </p>
+          <div class="card my-1 p-1 w-100">
+          <ul id="transaction-tabs" class="nav nav-pills custom_pills card-tabs-- js-card-tabs-- my-2">
+            <li class="nav-item tab-1-id" id="tab-1-id">
+              <button class="nav-link nav-link1 active" style="color:#000" >Overview</button>
+            </li>
+            <li class="nav-item tab-2-id" id="tab-2-id">
+              <button class="nav-link nav-link2" style="color:#000">State</button>
+            </li>
+            <li class="nav-item tab-3-id" id="tab-3-id">
+              <button class="nav-link nav-link3" style="color:#000" >Comment</button>
+            </li>
+          </ul>
+        </div>
           <div class="card js-ad-dependant-mb-3 mt-4 fs-15">
+
           <div class="card-body">
           <dl class="row py-2">
             <dt class="col-sm-3 col-lg-2  text-muted fs-15">
@@ -577,8 +598,8 @@
               <%= gettext "More Details:" %>
             </dt>
             <dd class="col-sm-9 col-lg-10">
-              <div class="fs-14 text-blue cursor-pointer" id="toggle"> <i class="fa fa-plus mr-2"></i> Click to show more</div>
-              <div class="fs-14 text-blue cursor-pointer" style="display:none" id="back_btn">  <i class="fa fa-minus mr-2"></i> Click to show less</div>
+              <div class="fs-14 text-green cursor-pointer" id="toggle"> <i class="fa fa-plus mr-2"></i> Click to show more</div>
+              <div class="fs-14 text-green cursor-pointer" style="display:none" id="back_btn">  <i class="fa fa-minus mr-2"></i> Click to show less</div>
             </dd>
         </dl>
       </div>
@@ -598,19 +619,15 @@
       </div>
     </div>
   <% end %>
-  <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/transaction.js") %>"></script>
-</section>
-
-
-
-
-
-
-<script>
+  <script>
     const targetDiv = document.getElementById("decode_input");
     const btns = document.getElementById("toggle");
     const backbtns = document.getElementById ("back_btn");
     const inputDiv = document.getElementById ("input_method");
+     const btnGoBack = document.querySelector(".btn-go-back");
+
+
+
 
     btns.onclick = function () {
       if (targetDiv.style.display !== "none") {
@@ -639,5 +656,13 @@
          inputDiv.style.display = "block";
       }
     };
+    btnGoBack.onclick = function(){
+      window.history.back();
+    }
+
+
 
 </script>
+  <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/transaction.js") %>"></script>
+
+</section>

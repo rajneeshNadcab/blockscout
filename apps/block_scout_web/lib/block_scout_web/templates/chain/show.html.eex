@@ -1,5 +1,6 @@
 
 <div class="container-fluid search_backdrop">
+
   <div class="search_backdrop_overlay py-5">
     <div class="container mb-4">
       <div class="row">
@@ -25,7 +26,7 @@
 
 
 <div class="container" style="position:relative; top:-50px;" data-page="chain-details">
-<div class="card shadow mb-3">
+<div class="card shadow">
   <div class="card-body px-md-2 py-3">
     <div class="">
       <div class="row">
@@ -40,7 +41,7 @@
                 subnetwork: BlockScoutWeb.LayoutView.subnetwork_title()
               ) %>  Price
               </span>
-              <span class="dashboard-data fs-14 text-truncate width160">
+              <span class="dashboard-data fs-14  width160">
               <!-- <span id="price_usd"></span> -->
               $20
               </span>
@@ -61,19 +62,7 @@
                   <%# Explicity put @chart_config.market in a variable %>
                   <%# This is done so that when people add a new chart source, x, %>
                   <%# They wont just access @chart_config.x w/o first checking if x exists%>
-                  <!--<% market_chart_config = @chart_config.market%>
 
-
-                  <%= if Enum.member?(@chart_config.market, :market_cap) do %>
-                    <div class="dashboard-banner-chart-legend-item market-cap-per-day">
-                        <div class="d-flex" style="height: 20px; line-height: 20px;">
-                          <% total_market_cap = market_cap(@market_cap_calculation, @exchange_rate) %>
-                          <span style="display: contents;" class="dashboard-banner-chart-legend-value" data-selector="market-cap" data-usd-value="<%= total_market_cap %>">
-                          </span>
-                        </div>
-                    </div>
-                  <% end %>
-                -->
                 <% end %>
               </span>
               <!--<span class="dashboard-data" data-selector="address-count">
@@ -101,7 +90,7 @@
             <img class="mr-3 media_icon" src="images/block-bg-slider2.svg" width="50" height="40"  style="width:50px;">
             <div class="media-body">
               <span class="dashboard-banner-network-stats-label text-uppercase">
-                Last <span class='hide_on_xs'>Finalized </span>block
+                <span class='hide_on_xs'>Last Finalized </span>block
               </span>
               <span class="dashboard-data" data-selector="block-count">
                 <%= BlockScoutWeb.Cldr.Number.to_string!(@block_count, format: "#,###") %>
@@ -110,7 +99,8 @@
 
             <div class="text-right">
               <span class="dashboard-banner-network-stats-label text-uppercase">
-                <%= gettext "Wallet Addresses" %>
+                <%= gettext "Wallet" %>
+                <span class='hide_on_xs'>Addresses </span>
               </span>
               <span class="dashboard-data">
                 <%= BlockScoutWeb.Cldr.Number.to_string!(@address_count, format: "#,###") %>
@@ -154,7 +144,7 @@
                 <% end %>
           <% end %>}'
           data-history_chart_config = '<%= @chart_config_json %>'
-          width="350" height="250">
+          width="350" height="">
   </canvas>
           </div>
         </div>
