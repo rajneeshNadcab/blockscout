@@ -29,7 +29,7 @@
 }
 
 .search_backdrop {
-  background-image: linear-gradient(to right, #746305, #756e15, #767a24, #778532, #779041);
+  background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
   width: 100%;
   color: #fff;
 }
@@ -41,7 +41,7 @@
 }
 
 .footer_backdrop {
-  background-image: linear-gradient(to right, #746305, #756e15, #767a24, #778532, #779041);
+  background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
   width: 100%;
   color: #fff;
 }
@@ -61,7 +61,7 @@
 
 
 .logo_custom_img .logo_img {
-  background: url(/images/wyz-logo.svg);
+  background: url(/images/dscscan_title.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 189px;
@@ -69,7 +69,7 @@
 }
 
 .dark-theme-applied .logo_custom_img .logo_img {
-  background: url(/images/wyz-logo-dark.svg);
+  background: url(/images/dscscan_title.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 176px;
@@ -81,26 +81,26 @@
 .navbar-image {margin:0 10px;}
 
 .navbar-image .media_bg_icon {
-  background: url(/images/small-logo-icon.svg);
+  background: url(/images/dscscanlogo.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .dark-theme-applied .navbar-image .media_bg_icon {
-  background: url(/images/small-logo-icon.svg);
+  background: url(/images/dscscanlogo.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .dashboard_home .media_bg_icon {
-    background: url(/images/small-logo-icon.svg);
+    background: url(/images/dscscanlogo.png);
     background-size: contain;
     background-position: 27% 4%;
     background-repeat: no-repeat;
 }
 
 .dark-theme-applied .dashboard_home .media_bg_icon{
-  background: url(/images/small-logo-icon.svg);
+  background: url(/images/dscscanlogo.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -252,7 +252,7 @@ a.metamask_btn {
         <div class="col-md-12">
           <%= link to: webapp_url(@conn), class: "footer-brand" do %>
             <%= if logo_footer() do %>
-              <img class="" src="/images/small-logo-icon.svg" style="width:35px; height: 35px" /><span class="footerTitle">Powered by WYZth PoA L1 Chain</span>
+              <img class="" src="/images/dscscanlogo.png" style="width:35px; height: 35px" /><span class="footerTitle">Powered by DSC Chain</span>
             <% end %>
             <%= if logo_text() do %>
               <span class="logo-text in-footer <%= unless logo_footer(), do: "no-logo" %>"> <%= logo_text() %> </span>
@@ -263,7 +263,7 @@ a.metamask_btn {
 
       <div class="footer-about-bg"></div>
       <p class="text-white">
-      <%= gettext("WYZthScan is a Block Explorer and Analytics Platform for WYZth ") %>  <%= gettext(" chain, a decentralized smart contracts platform.") %></p>
+      <%= gettext("Dscscan is a Block Explorer and Analytics Platform for DSC ") %>  <%= gettext(" chain, a decentralized smart contracts platform.") %></p>
 
       <a type="button" class="metamask_btn btn-sm text-decoration-none  py-1 mr-2" href="/preferences">
         <i class="fas fa-cogs mr-1"></i> Preferences
@@ -308,7 +308,7 @@ a.metamask_btn {
         <h3 class="text-white heading_border"><%= gettext("Products & Services") %></h3>
         <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
 
-        <li><a href="https://wyscale.com/" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("WYscale") %></a></li>
+        <li><a href="https://wyscale.com/" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("DSC") %></a></li>
         <li><a href="/chat" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Blockscan Chat") %></a></li>
 
         <!--Absinthe<%= for %{title: title, url: url} <- main_nets do %>

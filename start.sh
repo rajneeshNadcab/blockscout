@@ -2,13 +2,16 @@
 #export MIX_ENV=prod\
 sudo chmod -R 777 ../blockscout
 export ETHEREUM_JSONRPC_VARIANT=besu
-export ETHEREUM_JSONRPC_HTTP_URL=http://ec2-52-66-146-60.ap-south-1.compute.amazonaws.com/
-export ETHEREUM_JSONRPC_WS_URL=ws://ec2-52-66-146-60.ap-south-1.compute.amazonaws.com/ws
+# export ETHEREUM_JSONRPC_HTTP_URL=http://ec2-52-66-146-60.ap-south-1.compute.amazonaws.com/
+export ETHEREUM_JSONRPC_HTTP_URL=http://57.180.5.114:12001
+
+# export ETHEREUM_JSONRPC_WS_URL=ws://ec2-52-66-146-60.ap-south-1.compute.amazonaws.com/ws
+
 export DATABASE_URL=postgres://postgres:wyzscan@localhost:5432/blockscout?ssl=false
-export ETHEREUM_JSONRPC_TRACE_URL=http://ec2-52-66-146-60.ap-south-1.compute.amazonaws.com/ 
-export NETWORK=Tarality Blockchain Explorer
-export SUBNETWORK="WYZth Scan"
-export LOGO=/images/wyz-logo.svg
+export ETHEREUM_JSONRPC_TRACE_URL=http://57.180.5.114:12001 
+export NETWORK=DSC Blockchain Explorer
+export SUBNETWORK="DSC Scan"
+export LOGO=/images/dscscan_title.png
 export LOGO_FOOTER=/images/wyz-footer-logo.svg
 #export ETHEREUM_JSONRPC_TRANSPORT=http
 #export ETHEREUM_JSONRPC_TRANSPORT=http
@@ -47,11 +50,11 @@ export CACHE_TOKEN_EXCHANGE_RATE_PERIOD=3600000
 export ENABLE_SOURCIFY_INTEGRATION=true 
 export SOURCIFY_SERVER_URL=https://sourcify.dev/server
 export SOURCIFY_REPO_URL=https://repo.sourcify.dev/contracts/
-export CHAIN_ID=303
+export CHAIN_ID=1779
 export DISPLAY_TOKEN_ICONS=true
 export RE_CAPTCHA_SECRET_KEY=6Ldd_O8hAAAAAG1yA9GmQYunRTpp40TOX_A8sa2y
 export RE_CAPTCHA_CLIENT_KEY=6Ldd_O8hAAAAANk3zRRCYpKTzUO4RcX9Pxv9n8_R
-export JSON_RPC=https://rpc-mainnet3.wyzthchain.org
+export JSON_RPC=http://57.180.5.114:12001
 #export ADMIN_PANEL_ENABLED=true
 # export METADATA_CONTRACT=
 export VALIDATORS_CONTRACT=0x874967F5Fe0b75Ee6592D981E5E47a2D11E3E2Bf

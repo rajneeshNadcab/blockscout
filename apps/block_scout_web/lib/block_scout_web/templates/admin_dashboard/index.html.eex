@@ -22,7 +22,7 @@
   text-align: center;
   margin-bottom: 30px;
   font-size: 36px;
-  color: #a9ab3f;
+  color: #0e1259;
 }
 
 .form-container form {
@@ -47,7 +47,7 @@
 
 .form-container button {
   padding: 10px;
-  background-color: #a9ab3f;
+  background-color: #0e1259;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -57,18 +57,18 @@
 }
 
 .form-container button:hover {
-  background-color: #aaab4ba8;
+  background-color: #0e1259;
 }
 
 .form-container a {
   text-decoration: none;
-  color: #aaab4ba8;
+  color: #0e1259;
   font-size: 18px;
   transition: color 0.2s ease-in-out;
 }
 
 .form-container a:hover {
-  color: #aaab4ba8;
+  color: #0e1259;
 }
 
 .form-container p {

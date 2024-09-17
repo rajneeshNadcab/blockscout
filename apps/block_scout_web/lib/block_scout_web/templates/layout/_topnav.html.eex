@@ -11,7 +11,7 @@
     <div class="row topbar_search align-items-center py-2">
       <div class="col-lg-6 pl-4">
           <div class="d-none d-lg-inline-block m text-nowrap fs-12">
-            <span class="text-secondary"> WYZth Price :</span> <span class="text-info"> $<span id="topNavLivePrice">0.0708</span></span>
+            <span class="text-secondary"> DSC Price :</span> <span class="text-info"> $<span id="topNavLivePrice">0.0708</span></span>
             <span data-toggle="tooltip" data-placement="top" data-title="Changes in the last 24 hours" data-original-title="" title="">
               <span class="text-success d-none"> (+1.27%)</span>
             </span>
@@ -125,7 +125,7 @@
                 </a>
                 <div class="dropdown-menu fade-up" aria-labeledby="navbarTransactionsDropdown">
                   <%= link(
-                        gettext("Top Tokens WRC20"),
+                        gettext("Top Tokens"),
                         class: "dropdown-item #{tab_status("tokens", @conn.request_path)}",
                         to: tokens_path(@conn, :index)
                       ) %>
@@ -189,11 +189,11 @@
                         class: "dropdown-item #{tab_status("Directory", @conn.request_path)}",
                         to: "/directories"
                       ) %>
-                      <%= link(
+                    <!--  <%= link(
                         gettext("DeployedApps"),
                         class: "dropdown-item #{tab_status("DeployedApps", @conn.request_path)}",
                         to: "/dapps"
-                      ) %>
+                      ) %> -->
 
 
                       <a class="dropdown-item" target="_blank" href="https://docs.wyzth.org/docs/Overview"> API Documentation</a>
@@ -248,7 +248,7 @@
                 </div>
               </li>
 
-              <li class="nav-item dropdown ">
+            <!--  <li class="nav-item dropdown ">
               <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= gettext("Tools") %>
               </a>
@@ -266,7 +266,7 @@
               </div>
 
 
-              </li>
+              </li> -->
 
              <!-- <li class="nav-item dropdown">
               <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -290,7 +290,7 @@
 
 
 
-              <li class="nav-item dropdown d-lg-none d-block">
+             <!-- <li class="nav-item dropdown d-lg-none d-block">
               <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <%= gettext("Explorer") %>
 
@@ -309,7 +309,7 @@
                     ) %>
 
               </div>
-            </li>
+            </li> -->
             <li>
             <a class="nav-link sign-in-text " href="/signin" style="width: 95px">
               <i class="fa fa-user-circle mx-1 mobile-d-none"></i> Sign In
@@ -351,13 +351,13 @@
                       <%= link(
                         gettext("Mainnet"),
                         class: "dropdown-item #{tab_status("mainnet", @conn.request_path)}",
-                        to: "https://wyzthscan.org/"
+                        to: "#"
                       ) %>
 
                       <%= link(
                         gettext("Testnet"),
                         class: "dropdown-item #{tab_status("testnet", @conn.request_path)}",
-                        to: "https://testnet.wyzthscan.org/"
+                        to: "#"
                       ) %>
 
 
