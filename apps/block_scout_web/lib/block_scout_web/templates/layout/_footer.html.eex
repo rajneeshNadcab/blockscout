@@ -216,17 +216,17 @@ a.metamask_btn {
        <div class="col-md-9 col-6  ml-0">
           <div class="footer-social float-left ">
 
-            <a href="#" rel="noreferrer" target="_blank" title="medium">
+            <a href="https://t.me/dscblockchainsupport" rel="noreferrer" target="_blank" title="medium">
               <i class="fab fa-telegram"></i>
              </a>
-              <a href="#" rel="noreferrer" target="_blank" title="reddit">
+              <a href="https://www.instagram.com/dscblockchain?igsh=MW8xdTdrbnBhOWRkYw==" rel="noreferrer" target="_blank" title="reddit">
              <i class="fab fa-instagram"></i>
                </a>
 
-             <a href="#" rel="noreferrer" target="_blank" title="facebook">
+            <!-- <a href="#" rel="noreferrer" target="_blank" title="facebook">
               <i class="fab fa-linkedin"></i>
-              </a>
-            <a href="#" rel="noreferrer" target="_blank" title="twitter">
+              </a> -->
+            <a href="https://x.com/DSC_Blockchain" rel="noreferrer" target="_blank" title="twitter">
             <i class="fab fa-twitter"></i>
              </a>
           </div>
@@ -274,11 +274,11 @@ a.metamask_btn {
     <div class="col-6 col-md-4 col-lg-<%= col_size %>" >
       <h3 class="text-white heading_border">Company</h3>
       <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
-        <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("About Us") %></a></li>
-        <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
+        <li><a href="https://dsclab.ai/" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Community Website") %></a></li>
+       <!-- <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
 
         <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Careers") %>
-        <sup class="join">Join Us</sup></a></li>
+        <sup class="join">Join Us</sup></a></li> -->
         <li><a href="/terms-of-service" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Terms of Service") %></a></li>
 
       </ul>
@@ -289,7 +289,7 @@ a.metamask_btn {
       <div class="col-6 col-md-4 col-lg-<%= col_size %>">
         <h3 class="text-white heading_border"><%= gettext("Resources") %></h3>
         <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
-          <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("API Documentation") %></a></li>
+          <li><a href="/api-docs" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("API Documentation") %></a></li>
           <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Newsletter") %></a></li>
 
           <!--
@@ -308,7 +308,7 @@ a.metamask_btn {
         <h3 class="text-white heading_border"><%= gettext("Products & Services") %></h3>
         <ul style="list-style: none;margin: 0; padding: 0; line-height: 31px;">
 
-        <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("DSC") %></a></li>
+       <!-- <li><a href="#" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("DSC") %></a></li> -->
         <li><a href="/chat" target="_blank" rel="noreferrer" class="footer-link"><%= gettext("Blockscan Chat") %></a></li>
 
         <!--Absinthe<%= for %{title: title, url: url} <- main_nets do %>

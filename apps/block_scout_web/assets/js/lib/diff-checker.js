@@ -40,7 +40,7 @@ document.querySelector('.txtContAddresbtn2').onclick = async function() {
   const val2 = document.querySelector('#txtContAddres2').value;
   const sourceDest2 = document.querySelector('.src-2');
   const divdiff = document.querySelector('.divDiff');
- const sourceCode2 =  await axios.get(`https://wyzthscan.org/node-api/getSourceCode?address=${val2}`);
+ const sourceCode2 =  await axios.get(`https://explorer.dscscan.io/node-api/getSourceCode?address=${val2}`);
  const code = sourceCode2.data.data;
  if(code.length==0){
   sourceDest2.textContent = "Contract Address does not exists.";
