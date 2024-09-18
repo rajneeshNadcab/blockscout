@@ -59,18 +59,18 @@
 
 
       <div class="collapse navbar-collapse order-md-2 " id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto  ">
-          <li class="nav-item">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item ">
           <%= link(
               gettext("Home"),
-              class: "nav-link #{tab_status("pending-transactions", @conn.request_path)}",
+              class: "nav-link dark-theme-navbar #{tab_status("pending-transactions", @conn.request_path)}",
               "data-test": "pending_transactions_link",
               to: webapp_url(@conn)
             ) %>
           </li>
             <%= if Application.get_env(:block_scout_web, BlockScoutWeb.WebRouter)[:enabled] do %>
               <li class="nav-item dropdown">
-                <a class="nav-link topnav-nav-link dropdown-toggle" href="#" id="navbarBlocksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link topnav-nav-link dropdown-toggle dark-theme-navbar" href="#" id="navbarBlocksDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= gettext("Blockchain") %>
                 </a>
                 <div class="dropdown-menu fade-up" aria-labelledby="navbarBlockchainDropdown">
@@ -80,7 +80,7 @@
                   <%= link(
                         gettext("View Txns"),
                         to: transaction_path(@conn, :index),
-                        class: "#{if variant == EthereumJSONRPC.Besu, do: "border-bottom", else: ""} dropdown-item #{tab_status("txs", @conn.request_path)}"
+                        class: "dark-theme-navbar #{if variant == EthereumJSONRPC.Besu, do: "border-bottom", else: ""} dropdown-item #{tab_status("txs", @conn.request_path)}"
                       ) %>
 
                   <%= if variant !== EthereumJSONRPC.Besu do %>
@@ -119,7 +119,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" role="button" id="navbarTokensDropdown" class="dark-theme-navbar  nav-link topnav-nav-link dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= gettext("Tokens") %>
 
                 </a>
@@ -140,7 +140,7 @@
 
 
             <li class="nav-item dropdown">
-                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" role="button" id="navbarTokensDropdown" class="dark-theme-navbar nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= gettext("NFTs") %>
 
                 </a>
@@ -167,7 +167,7 @@
 
 
             <li class="nav-item dropdown">
-                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle dark-theme-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= gettext("Resources") %>
 
                 </a>
@@ -204,7 +204,7 @@
 
 
           <li class="nav-item dropdown ">
-                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" role="button" id="navbarTokensDropdown" class="nav-link topnav-nav-link dropdown-toggle dark-theme-navbar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= gettext("Developers") %>
 
                 </a>
@@ -310,11 +310,11 @@
 
               </div>
             </li> -->
-            <li>
+           <!-- <li>
             <a class="nav-link sign-in-text " href="/signin" style="width: 95px">
               <i class="fa fa-user-circle mx-1 mobile-d-none"></i> Sign In
             </a>
-          </li>
+          </li> -->
 
 
 

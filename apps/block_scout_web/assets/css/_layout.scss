@@ -1059,7 +1059,7 @@ a {
 }
 
 .dark-theme-applied .btn-green {
-    background: #42442a !important;
+    background: #bda3ef !important;
     color: #0e1259 !important;
 }
 
@@ -1082,7 +1082,9 @@ a {
 // .dark-theme-applied .dashboard-banner-chart>canvas {
 //     filter: brightness(1.3) contrast(0.5);
 // }
-
+.dark-theme-applied .dark-theme-navbar {
+color: #bdbdbd !important;
+}
 .dark-theme-applied .border-right-sm1,
 .dark-theme-applied .border-right-sm2 {
     border-right: 1px solid #424242;
