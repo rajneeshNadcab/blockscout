@@ -49,7 +49,7 @@
         <td class="text-right">
           <span class="p-1 border rounded-sm">
             <span class="fs-10 font-weight-bold">
-            <%= gettext "2" %>  <%= Explorer.coin_name() %>
+            <%= gettext "0.15" %>  <%= Explorer.coin_name() %>
             </span>
           </span>
         </td>
