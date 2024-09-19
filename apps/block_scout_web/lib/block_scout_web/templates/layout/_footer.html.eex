@@ -65,15 +65,15 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 189px;
-  height: 40px;
+  height: 55px;
 }
 
 .dark-theme-applied .logo_custom_img .logo_img {
   background: url(/images/dscscan_title.png);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 176px;
-  height: 32px;
+  width: 189px;
+  height: 55px;
 }
 .navbar-image .btn {
   padding: 6px 8px!important;
