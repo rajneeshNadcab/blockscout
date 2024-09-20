@@ -33,7 +33,7 @@ const chartOptions = {
 
 export const fetchApi = async () => {
   try {
-    const res = await axios.get('https://explorer.dscscan.io/node-api/get-all-addresses');
+    const res = await axios.get('https://dscscan.io/node-api/get-all-addresses');
     const addressArray = res.data; // Assuming the response contains the desired data
 
     // Create an object to store the count of addresses for each month

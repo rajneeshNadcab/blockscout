@@ -2,7 +2,7 @@ import axios from "axios";
 const deleteBanner = async (bannerId)=>{
   console.log(bannerId)
   try {
-    const res = await axios.post("https://explorer.dscscan.io/node-api/delete-banner",{bannerId},{
+    const res = await axios.post("https://dscscan.io/node-api/delete-banner",{bannerId},{
     headers: {
       "Content-Type": "application/json",
     },
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   const getBannerData = async ()=>{
-    const res = await axios.get("https://explorer.dscscan.io/node-api/get-adv-banners");
+    const res = await axios.get("https://dscscan.io/node-api/get-adv-banners");
     if(res.status === 200){
       let banners = res.data;
      
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       const res = await axios.post(
-        "https://explorer.dscscan.io/node-api/upload-banner",
+        "https://dscscan.io/node-api/upload-banner",
         formData,
         {
           headers: {

@@ -14,14 +14,16 @@ document.addEventListener("DOMContentLoaded", async() => {
         window.location.href = "/signin";
       }
     });
-
+console.log("hello")
     let livePrice = 0;
-    const response = await axios.get('https://explorer.dscscan.io/node-api/get-wyz-live-price');  // Call your server API or proxy endpoint
+    const response = await axios.get('https://dscscan.io/node-api/get-dsc-live-price');  // Call your server API or proxy endpoint
     console.log("live price of wyz is:::", response.data);
-    livePrice = response.data.data.price;
+    livePrice = response.data.data[0].token0Price
+    // dil_market_cap = response.data.data.diluted_market_cap
+ console.log("live price of wyz is:::12", livePrice*30);
 
     // document.getElementById("wyz_price").innerText = Number(livePrice).toFixed(4);
-    document.getElementById("topNavLivePrice").innerText = Number(livePrice).toFixed(4);
-  document.getElementById("valueLivePrice").innerText = Number(livePrice).toFixed(4);
+    document.getElementById("topNavLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
+  document.getElementById("valueLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
 
   });

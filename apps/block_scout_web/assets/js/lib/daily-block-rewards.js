@@ -41,7 +41,7 @@ const chartOptions = {
 
 export const fetchApi = async () => {
   try {
-    const res = await axios.get('https://explorer.dscscan.io/node-api/get-block-rewards');
+    const res = await axios.get('https://dscscan.io/node-api/get-block-rewards');
     const dataArray = res.data; // Assuming the response contains the desired data
 
     // Prepare data for chart
