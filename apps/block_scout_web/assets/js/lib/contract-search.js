@@ -101,7 +101,7 @@ document.querySelector("#heroSubscribeButton-2").onclick = async function () {
       document.querySelector(".Output_section_contract_search").style.display =
         "block";
       const apiData = await axios.get(
-        `https://dscscan.io/node-api/search-in-code?query=${input}`
+        `https://explorer.dscscan.io/node-api/search-in-code?query=${input}`
       );
   
       apiData.data.data==0?

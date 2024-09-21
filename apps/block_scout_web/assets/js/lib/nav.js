@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     });
 console.log("hello")
     let livePrice = 0;
-    const response = await axios.get('https://dscscan.io/node-api/get-dsc-live-price');  // Call your server API or proxy endpoint
+    const response = await axios.get('https://explorer.dscscan.io/node-api/get-dsc-live-price');  // Call your server API or proxy endpoint
     console.log("live price of wyz is:::", response.data);
     livePrice = response.data.data[0].token0Price
     // dil_market_cap = response.data.data.diluted_market_cap
