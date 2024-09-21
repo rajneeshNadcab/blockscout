@@ -29,25 +29,28 @@
 }
 
 .search_backdrop {
-  background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
+  # background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
+  background-color:#000;
   width: 100%;
   color: #fff;
 }
 
 .search_backdrop_overlay {
-  background-image: url(/images/backdrop-bg.svg);
+  # background-image: url(/images/backdrop-bg.svg);
   background-repeat: repeat;
   background-position: left center;
 }
 
 .footer_backdrop {
-  background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
+  # background-image: linear-gradient(-45deg,#060606,#0e1259,#180020);
+  background-color:#000;
+
   width: 100%;
   color: #fff;
 }
 
 .footer_overlay {
-  background-image: url(/images/backdrop-bg.svg);
+  # background-image: url(/images/backdrop-bg.svg);
   background-repeat: repeat;
   background-position: left center;
 }
@@ -61,7 +64,7 @@
 
 
 .logo_custom_img .logo_img {
-  background: url(/images/dscscan_title.png);
+  background: url(/images/dscscan_title_light.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 189px;
