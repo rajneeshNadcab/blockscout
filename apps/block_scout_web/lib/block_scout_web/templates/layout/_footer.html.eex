@@ -255,7 +255,7 @@ a.metamask_btn {
         <div class="col-md-12">
           <%= link to: webapp_url(@conn), class: "footer-brand" do %>
             <%= if logo_footer() do %>
-              <img class="" src="/images/dscscanlogo.png" style="width:35px; height: 35px" /><span class="footerTitle">Powered by DSC Smart Chain Chain (L1)</span>
+              <img class="" src="/images/dscscanlogo.png" style="width:35px; height: 35px" /><span class="footerTitle">Powered by DSC Smart Chain (L1)</span>
             <% end %>
             <%= if logo_text() do %>
               <span class="logo-text in-footer <%= unless logo_footer(), do: "no-logo" %>"> <%= logo_text() %> </span>
