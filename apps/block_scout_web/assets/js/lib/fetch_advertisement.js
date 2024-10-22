@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     document.getElementById("wyz_price").innerText = (Number(livePrice) *30).toFixed(4);
     document.getElementById("topNavLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
-    document.getElementById("showMarketCap").innerText = 60000000*(Number(livePrice) *30); // console.log("live price of DSC is:::", response.data);
+    document.getElementById("showMarketCap").innerText = 60000000*(Number(livePrice)); // console.log("live price of DSC is:::", response.data);
 
     
     document.getElementById("valueLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
