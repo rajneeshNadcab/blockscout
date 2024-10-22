@@ -6,7 +6,7 @@ const chartOptions = {
     type: 'area',
   },
   title: {
-    text: 'Daily WYZ Supply',
+    text: 'Daily DSCS Supply',
   },
   xAxis: {
     type: 'datetime',
@@ -21,7 +21,7 @@ const chartOptions = {
   },
   yAxis: {
     title: {
-      text: 'New WYZ Supply per Day',
+      text: 'New DSC Supply per Day',
     },
   },
   tooltip: {
@@ -32,7 +32,7 @@ const chartOptions = {
   },
   series: [
     {
-      name: 'Daily WYZ Supply',
+      name: 'Daily DSC Supply',
       data: [],
       color: "#bdc54a80"
     },
