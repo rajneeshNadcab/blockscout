@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // async function fetchLivePrice() {
     let livePrice = 0;
-    let dil_market_cap = 0;
+    // let dil_market_cap = 60000000;
     const response = await axios.get('https://dscscan.io/node-api/get-dsc-live-price');  // Call your server API or proxy endpoint
     // console.log("live price of wyz is:::", response.data);
     livePrice = response.data.data[0].token0Price
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     document.getElementById("wyz_price").innerText = (Number(livePrice) *30).toFixed(4);
     document.getElementById("topNavLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
-    document.getElementById("showMarketCap").innerText = Number(dil_market_cap).toFixed(2); // console.log("live price of wyz is:::", response.data);
+    document.getElementById("showMarketCap").innerText = 60000000*(Number(livePrice) *30); // console.log("live price of DSC is:::", response.data);
 
     
     document.getElementById("valueLivePrice").innerText = (Number(livePrice) *30).toFixed(4);
