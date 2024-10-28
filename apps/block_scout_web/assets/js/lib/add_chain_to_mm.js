@@ -16,10 +16,10 @@ export async function addChainToMM ({ btn }) {
         method: 'wallet_addEthereumChain',
         params: [{
           chainId: chainIDFromInstance,
-          chainName: subNetwork,
+          chainName: "Digital Smart Chain",
           nativeCurrency: {
-            name: coinName,
-            symbol: coinName,
+            name: "DSCs",
+            symbol: "DSCs",
             decimals: 18
           },
           rpcUrls: [jsonRPC],
