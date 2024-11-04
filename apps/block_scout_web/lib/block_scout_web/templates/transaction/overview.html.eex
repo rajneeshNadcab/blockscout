@@ -391,19 +391,18 @@
             <% _ -> %>
           <% end %>
           <!-- Value -->
-          <dl class="row py-2">
+            <dl class="row py-2">
             <dt class="col-sm-3 col-lg-2  text-muted fs-15">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                 text: gettext("Value sent in the native token (and USD) if applicable.") %>
               <%= gettext "Value:" %>
             </dt>
-            <dd class="col-sm-9 col-lg-10"> <!-- <%= value(@transaction) %> -->
-           <!-- <%= if !empty_exchange_rate?(@exchange_rate) do %>
+            <dd class="col-sm-9 col-lg-10"> <%= value(@transaction) %>
+            <%= if !empty_exchange_rate?(@exchange_rate) do %>
               (<span data-wei-value=<%= @transaction.value.value %>
                 data-usd-exchange-rate=<%= @exchange_rate.usd_value %>>
               </span>)
-            <% end %> -->
-            <span>$<span id="valueTxDetailLivePrice">0.708</span></span>
+            <% end %>
             </dd>
           </dl>
           <!-- Transaction Fee -->
