@@ -18,8 +18,8 @@ export async function addChainToMM ({ btn }) {
           chainId: chainIDFromInstance,
           chainName: "Digital Smart Chain",
           nativeCurrency: {
-            name: "DSCs",
-            symbol: "DSCs",
+            name: coinName,
+            symbol: coinName,
             decimals: 18
           },
           rpcUrls: [jsonRPC],
