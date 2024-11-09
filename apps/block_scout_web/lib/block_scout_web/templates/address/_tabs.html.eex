@@ -130,13 +130,13 @@
 
     <% end %>
   </li>
-  <li class="navItem ">
+  <li class="navItem nav-item-last">
     <%= if @is_proxy do %>
       <%= link(
           gettext("Read Proxy"),
           to: AccessHelpers.get_path(@conn, :address_read_proxy_path, :index, @address.hash),
           class: "navItemLink #{tab_status("read-proxy", @conn.request_path)}",
-          style: "width:107px !important; display:block"
+          style: "width:107px !important; display:block; margin-right:10px"
 
           )%>
     <% end %>
@@ -145,7 +145,7 @@
       gettext("Write Contract"),
       to: AccessHelpers.get_path(@conn, :address_write_contract_path, :index, @address.hash),
       class: "navItemLink #{tab_status("write-contract", @conn.request_path)}",
-      style: "width:114px !important; display:block"
+      style: "width:114px !important; display:block; margin-right:10px "
     ) %>
   <% end %>
 
@@ -154,7 +154,7 @@
         gettext("Write Proxy"),
         to: AccessHelpers.get_path(@conn, :address_write_proxy_path, :index, @address.hash),
         class: "navItemLink #{tab_status("write-proxy", @conn.request_path)}",
-        style: "width:109px !important; display:block"
+        style: "width:109px !important; display:block; margin-right:10px"
 
         )%>
   <% end %>

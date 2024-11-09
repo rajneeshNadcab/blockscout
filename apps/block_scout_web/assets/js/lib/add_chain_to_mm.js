@@ -8,6 +8,7 @@ export async function addChainToMM ({ btn }) {
     const coinName = document.getElementById('js-coin-name').value
     const subNetwork = document.getElementById('js-subnetwork').value
     const jsonRPC = document.getElementById('js-json-rpc').value
+    const walletName = document.getElementById('js-wallet-name').value
     const path = process.env.NETWORK_PATH || '/'
 
     const blockscoutURL = location.protocol + '//' + location.host + path
@@ -16,7 +17,7 @@ export async function addChainToMM ({ btn }) {
         method: 'wallet_addEthereumChain',
         params: [{
           chainId: chainIDFromInstance,
-          chainName: "Digital Smart Chain",
+          chainName: walletName,
           nativeCurrency: {
             name: coinName,
             symbol: coinName,

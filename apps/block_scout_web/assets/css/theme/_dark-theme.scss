@@ -32,7 +32,7 @@ $dark-stakes-banned-background: #313131;
 }
 
 .dark-theme-applied {
-    color: #fff;
+    color: #fff !important;
     // navbar
     .navbar.navbar-primary {
         background-color: $dark-light-bg;

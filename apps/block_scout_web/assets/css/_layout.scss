@@ -12,9 +12,15 @@
 }
 
 a {
-    color: #000 !important;
+    color: #000 !important ;
     text-decoration: none;
     background-color: transparent;
+}
+.dark-theme-applied a {
+    color: #fff !important;
+}
+.main-search-autocomplete::placeholder{
+    color:#aaa !important
 }
 
 .bg-white {
@@ -135,6 +141,9 @@ a {
     background-color: linear-gradient(50deg, rgba(116, 98, 4, 1) 7%, rgba(104, 126, 57, 1) 77%, rgba(119, 145, 66, 1) 100%);
 }
 
+.nav-item-last{
+    display: flex   ;
+}
 .bg-green {
     background-color: #757219;
 }

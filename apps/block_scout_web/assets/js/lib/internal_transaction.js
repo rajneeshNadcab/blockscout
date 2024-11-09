@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     table.innerHTML = loaderHtml;
 
     try {
-      const apiResponse = await axios.get(`https://wyzthscan.org/internal-transactions?page=${page}&pageSize=50`);
+      const apiResponse = await axios.get(`https://dscscan.io//node-api/internal-transactions?page=${page}&pageSize=50`);
       const apiData = apiResponse.data;
       console.log(apiData, "apiData");
 
