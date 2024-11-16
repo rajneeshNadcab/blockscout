@@ -46,7 +46,7 @@
           </div>
         </h1>
         <div class="ml-2 overview-title-buttons add_icon_btns token d-none "  id="token-check-icon">
-        <i class="fa-regular fa-circle-check" style="color:green;"></i>
+        <i class="fa-regular fa-circle-check" style="color:green; font-size:18px; position:relative; top:8px"></i>
 
         </div>
         <div class="ml-2 overview-title-buttons add_icon_btns token">
