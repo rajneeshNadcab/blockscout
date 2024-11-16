@@ -23,6 +23,7 @@
                 <%= nil %>
               <% end %>
               <%= if token_name?(@token) do %>
+              <input id="get-token-hash" class="d-none" value="<%= Address.checksum(@token.contract_address_hash) %>" />
                   <span
                     id="token-icon"
                     data-chain-id="<%= Application.get_env(:block_scout_web, :chain_id) %>"
@@ -34,16 +35,22 @@
                   data-address-hash="<%= Address.checksum(@token.contract_address_hash) %>">
 
                 </span>
+
                   <%= gettext("Token") %>
                   <div class="title-with-label text-secondary"> <%= @token.name %></div>
+
               <% else %>
                 <%= gettext("Token Details") %>
               <% end %>
               <%= render BlockScoutWeb.AddressView, "_labels.html", address_hash: @token.contract_address_hash, tags: @tags %>
           </div>
         </h1>
+        <div class="ml-2 overview-title-buttons add_icon_btns token d-none "  id="token-check-icon">
+        <i class="fa-regular fa-circle-check" style="color:green;"></i>
 
+        </div>
         <div class="ml-2 overview-title-buttons add_icon_btns token">
+
           <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
               additional_classes: ["overview-title-item"],
               clipboard_text: Address.checksum(@token.contract_address_hash),

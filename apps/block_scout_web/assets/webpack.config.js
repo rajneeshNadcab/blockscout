@@ -92,6 +92,7 @@ const appJs =
       'admin_signup':'./js/lib/admin_signup.js',
       'admin_verify':'./js/lib/admin_verify.js',
       'set_icon':'./js/lib/set_icon.js',
+      'set_icon_new':'./js/lib/set_icon_new.js',
       'reset_password':'./js/lib/reset_password.js',
       'userdashboard':'./js/lib/userdashboard.js',
       'advertisement_dash':'/js/lib/advertisement_dash.js',

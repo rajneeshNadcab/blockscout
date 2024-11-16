@@ -4,6 +4,7 @@
   <%= case @result.type do %>
         <% "token" -> %>
             <td class="token-icon">
+
                 <span
                     class="token-icon mr-1"
                     data-address-hash="<%= @result.address_hash %>"
@@ -25,6 +26,7 @@
                 <a href="<%= token_path(@conn, :show, @result.address_hash) %>">
                     <%= highlight_search_result(res, @query) %>
                 </a>
+
             </td>
         <% "address" -> %>
             <%= render BlockScoutWeb.SearchView, "_empty_td.html" %>

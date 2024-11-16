@@ -18,12 +18,16 @@
       %>
     <% end %>
   </td>
-  <td class="stakes-td">
+  <td class="stakes-td d-flex align-items-center">
+
     <% token = token_display_name(@token) %>
     <%= link(token,
       to: token_path(BlockScoutWeb.Endpoint, :show, @token.contract_address_hash),
       "data-test": "token_link",
       class: "text-truncate") %>
+      <div class="ml-2 overview-title-buttons add_icon_btns token d-none token-check-icon-2"  >
+      <i class="fa-regular fa-circle-check"></i>
+      </div>
   </td>
   <td class="stakes-td">
     <%= render BlockScoutWeb.AddressView,
@@ -32,6 +36,7 @@
       contract: true,
       use_custom_tooltip: false
     %>
+    <input  class=" get-token-hash-2 d-none" value=@token.contract_address />
   </td>
   <td class="stakes-td">
     <%= if decimals?(@token) do %>
@@ -47,3 +52,4 @@
     </span>
   </td>
 </tr>
+<script defer src="<%= static_path(@conn, "/js/set_icon_new.js") %>"></script>
